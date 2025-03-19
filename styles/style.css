@@ -1,55 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100vh;
-    background-color: #f8f8f8;
+    flex-direction: column;
 }
 
 .container {
+    flex: 1;
     display: flex;
-    width: 100%;
+    flex-direction: column;
 }
 
 .sidebar {
     width: 250px;
     background-color: #f9caca;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
-.sidebar h2 {
-    font-size: 1.5em;
-    color: #e57373;
-}
-
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin: 15px 0;
-}
-
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
 
 .content {
     flex-grow: 1;
     padding: 20px;
+    margin-left: 310px; 
 }
 
+/* Ajusta a grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
+/* Estiliza os cartões */
 .recipe-card {
     background: white;
     padding: 15px;
@@ -66,3 +54,105 @@ body {
 .recipe-card h3 {
     margin-top: 10px;
 }
+
+/* Rodapé */
+.footer {
+    background-color: transparent; 
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+    width: calc(100% - 250px); 
+    margin-left: 250px;
+    position: relative;
+    bottom: 0;
+}
+
+/* Links do rodapé */
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo especial para títulos das páginas */
+.content h1 {
+    font-size: 2em;
+    color: #e57373;
+    margin-bottom: 10px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile h3 {
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #333;
+}
+
+.profile a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.recipe-details {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe-details h2 {
+    color: #e57373;
+    margin-bottom: 10px;
+}
+
+.recipe-details p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.recipe-details ul, .recipe-details ol {
+    padding-left: 20px;
+}
+
+.recipe-details li {
+    margin-bottom: 5px;
+}
+
+
